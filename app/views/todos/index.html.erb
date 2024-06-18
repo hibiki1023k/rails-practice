@@ -1,0 +1,13 @@
+<h1>Todos#index</h1>
+
+<ul>
+  <% @todos.each do |todo| %>
+  <li>
+    <%= link_to todo.heading, todo %>
+    <ol>
+      <%= todo.body %>
+      <%= todo.done %>
+    </ol>
+  </li>
+  <% end %>
+</ul>

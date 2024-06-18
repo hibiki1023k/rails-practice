@@ -8,4 +8,10 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  get "/todos" => "todos#index"
+
+  get "/todos/:id" => "todos#show"
+
+  root "todos#index"
+  resources :todos
 end
